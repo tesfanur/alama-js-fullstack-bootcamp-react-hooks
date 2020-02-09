@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 //custom hook
 export const useFetch = (url, initialValue) => {
   const [result, setResult] = useState(initialValue);
-  useEffect(() => {
+  useEffect((url) => {
     fetch(url)
       .then(response => response.json())
       .then(JSONResult => setResult(JSONResult));
